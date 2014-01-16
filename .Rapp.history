@@ -1,0 +1,250 @@
+source("http://spark-public.s3.amazonaws.com/compdata/scripts/getmonitor-test.R")
+getmonitor.testscript()
+getmonitor.testscript
+data <- getmonitor(1,"specdata/")
+head(data)
+data <- getmonitor(101,"specdata/",TRUE)
+head(date)
+head(data)
+data <- getmonitor(200,"specdata/",TRUE)
+getmonitor.testscript
+getmonitor.testscript()
+getmonitor.testscript("getmonitorTest.txt")
+getmonitor.testscript()
+testscript
+testscript()
+source("http://spark-public.s3.amazonaws.com/compdata/scripts/getmonitor-test.R")
+getmonitor.testscript()
+data <- getmonitor(1,"specdata/",TRUE)
+data <- getmonitor("200","specdata/",TRUE)
+c <- "200"
+d<-as.numeric(c)
+d
+data <- getmonitor("200","specdata/",TRUE)
+c
+d
+data <- getmonitor("200","specdata",TRUE)
+directory <- "specdata"
+directory
+d <- as.character(200)
+d
+paste(directory, d)
+paste(directory, d, sep="/")
+data <- getmonitor("200","specdata",TRUE)
+source("getmonitor.R")
+data <- getmonitor("200","specdata",TRUE)
+source("getmonitor.R")
+data <- getmonitor("200","specdata",TRUE)
+data <- getmonitor(101,"specdata",TRUE)
+data <- getmonitor(1,"specdata",TRUE)
+source("getmonitor.R")
+data <- getmonitor(1,"specdata",TRUE)
+data <- getmonitor(101,"specdata",TRUE)
+data <- getmonitor(99,"specdata",TRUE)
+data <- getmonitor(099,"specdata",TRUE)
+source("getmonitor.R")
+data <- getmonitor(099,"specdata",TRUE)
+data <- getmonitor(1,"specdata",TRUE)
+data <- getmonitor(101,"specdata",TRUE)
+data <- getmonitor("200","specdata",TRUE)
+data <- getmonitor(99,"specdata",TRUE)
+source("getmonitor.R")
+getmonitor.testscript()
+as.numeric("200")
+getmonitor.testscript()
+data <- getmonitor("99","specdata",TRUE)
+source("getmonitor.R")
+data <- getmonitor("99","specdata",TRUE)
+data <- getmonitor("200","specdata",TRUE)
+data <- getmonitor(1,"specdata",TRUE)
+as.numeric(1)
+as.numeric("200")
+as.numeric(101)
+getmonitor.testscript
+data <- getmonitor(25,"specdata",TRUE)
+data <- getmonitor("200","specdata",TRUE)
+data <- getmonitor(25,"specdata",TRUE)
+b<- head(data[sample(nrow(data)),])
+b
+data <- getmonitor(25, "specdata")
+set.seed(2)
+b<- head(data[sample(nrow(data)),])
+b
+source("specdata/001.csv")
+data <- read.csv("specdata/001.csv")
+complete.cases(data)
+sum(complete.cases(data))
+getmonitor.testscript
+data <- getmonitor(1, "specdata")
+sum(complete.cases(data))
+sum(complete.cases(getmonitor(2, "specdata")))
+source("complete.R")
+complete("specdata", 2)
+data <- complete("specdata", 2)
+data
+data <- complete("specdata", 2:3)
+data
+data <- complete("specdata", 2:5)
+data
+source("complete.R")
+data <- complete("specdata", 2:5)
+data
+source("complete.R")
+data <- complete("specdata", 2:5)
+data
+data <- complete("specdata", 5:2)
+data
+source("complete.R")
+data <- complete("specdata", 5:2)
+source("complete.R")
+data <- complete("specdata", 5:2)
+data <- complete("specdata", 2)
+data
+source("complete.R")
+data <- complete("specdata", 2)
+data
+data <- complete("specdata", 2:5)
+source("complete.R")
+data <- complete("specdata", 2:5)
+c <- 2:5
+length(c)
+source("complete.R")
+source("complete.R")
+source("complete.R")
+data <- complete("specdata", 2:5)
+data
+data <- complete("specdata", 30:25)
+data
+source("complete.R")
+source("complete.R")
+source("complete.R")
+data <- complete("specdata", 30:25)
+data
+data <- complete("specdata", 1)
+data
+data <- complete("specdata", 1)
+data
+id <- 1
+length(id)
+id <- 30:25
+length(id)
+source("complete.R")
+data <- complete("specdata", 1)
+data
+source("complete.R")
+data <- complete("specdata", 1)
+data <- complete("specdata", c(2,4,8,10,12))
+data <- complete("specdata", 1)
+data <- complete("specdata", 1:5)
+data <- complete("specdata", 3)
+data <- complete("specdata", 3:18)
+data <- complete("specdata", 30:25)
+id <- 1
+id<-c(id)
+id
+data <- complete("specdata", 1)
+c<-vector()
+c
+c[id] = sum(complete.cases(getmonitor(id, "specdata")))
+c
+source("complete.R")
+data <- complete("specdata", 30:25)
+data <- complete("specdata", 1)
+data <- complete("specdata", c(2,4,8,10,12))
+data <- complete("specdata", 3)
+source("http://spark-public.s3.amazonaws.com/compdata/scripts/complete-test.R")
+complete.testscript()
+source("complete.R")
+complete.testscript()
+complete("specdata", 1)
+source("complete.R")
+complete("specdata", 1)
+source("complete.R")
+complete("specdata", 1)
+complete("specdata", c(2, 4, 8, 10, 12))
+complete("specdata", 30:25)
+complete("specdata", 3)
+data <- getmonitor(1, "specdata")
+summary(data)
+summarize(data)
+?cor
+cor(data$nitrate, data$sulfate)
+data$nitrate
+!is.na(data$nitrate)
+is.na(data$nitrate)
+n <- !is.na(data$nitrate)
+s <- !is.na(data$sulfate)
+cor(n,s)
+n <- complete.cases(data$nitrate)
+n
+data$nitrate[n,]
+data$nitrate[n]
+data$nitrate[complete.cases(data$nitrate)]
+data$sulfate[complete.cases(data$sulfate)]
+data$sulfate[complete.cases(data)]
+data$nitrate[complete.cases(data)]
+data$nitrate
+complete.cases(data)
+data[complete.cases(data)]
+data$nitrate[complete.cases(data)]
+data$sulfate[complete.cases(data)]
+head(data)
+sum(complete.cases(data))
+s <- data$sulfate[complete.cases(data)]
+n <- data$nitrate[complete.cases(data)]
+cr <- cor(s,n)
+cr
+head(cr)
+s
+n
+data
+complete("specdata",1)
+ls("specdata/")
+list.files("specdata/")
+n
+s
+cor(n,s)
+cor(s,n)
+head(data)
+complete.cases(data)
+head(complete.cases(data))
+head(data[complete.cases(data)])
+head(data[!complete.cases(data)])
+head(data[!complete.cases(data),])
+head(data[complete.cases(data),])
+head(n)
+head(s)
+list.dirs("specdata/")
+sum(dir("specdata/"))
+(dir("specdata/"))
+length(dir("specdata/"))
+vector("numeric")
+source("corr.R")
+corr("specdata/",500)
+vector(numeric)
+c(numeric)
+c(numeric, 0)
+c(numeric)
+source("corr.R")
+corr("specdata/")
+corr("specdata/",300)
+corr("specdata/",3000)
+corr("specdata/",3000)
+source("corr.R")
+corr("specdata/",3000)
+cr <- corr("specdata/",3000)
+length(cr)
+source("corr.R")
+cr <- corr("specdata/",3000)
+length(cr)
+cr <- numeric()
+length(cr)
+source("corr.R")
+cr <- corr("specdata/",3000)
+length(cr)
+n
+summary(n)
+c <- cor(n,s)
+summary(c)
+read.table("specdata/")
+read.table("specdata/*.csv")

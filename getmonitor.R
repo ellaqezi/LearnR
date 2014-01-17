@@ -11,16 +11,15 @@ getmonitor <- function(id, directory, summarize = FALSE) {
         ## FALSE
         
         ## Your code here
-        # if (id < 100) {
+        # if (is.na(as.numeric(id))) {
         	id <- as.numeric(id)
-        	dir <- list.files(directory, full.names=TRUE)
-        	data <- read.csv(dir[id])
+        	file <- list.files(directory, full.names=TRUE)[id]
         	# } else {
         		# name <- paste(directory, id, sep="/")
         		# file <- paste(name, "csv", sep=".")
-        		# data <- read.csv(file)
         		# }
-        if (summarize) {
+        	data <- read.csv(file)
+          if (summarize) {
         	print(summary(data))
         	}
         y <- data

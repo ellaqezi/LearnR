@@ -9,11 +9,11 @@ corr <- function(directory, threshold = 0) {
   
   ## Return a numeric vector of correlations
   com <- complete(directory)
-  dir <- length(com[com$nobs > threshold,1])
+  dir <- com[com$nobs > threshold,]
   cr <- numeric()
-  if (dir > 0) {
-    for (i in 1:dir) {
-      data <- getmonitor(i, directory)
+  if (length(dir[,1]) > 0) {
+    for (i in 1:length(dir[,1])) {
+      data <- getmonitor(dir[i,1], directory)
       data <- data[complete.cases(data),]
       cr[i] = cor(data$nitrate, data$sulfate)
     }

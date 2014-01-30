@@ -5,19 +5,19 @@ best <- function(state, outcome) {
   ## Check that state and outcome are valid
   if (length(stateData[,1]) > 0) {
     if (outcome == "heart attack") {
-      death <- stateDate[,11]      
+      index = 11      
     } else if (outcome == "heart failure") {
-      death <- stateDate[,17]      
+      index = 17  
     } else if (outcome == "pneumonia") {
-      death <- stateDate[,23]      
+      index = 23     
     } else {
-      return("Error: invalid outcome")
+      stop("invalid outcome")
     }
-    
+    death <- suppressWarnings(as.numeric(stateData[,index]))
   } else {
-    return("Error: invalid state")
+    stop("invalid state")
   }
   ## Return hospital name in that state with lowest 30-day death
   ## rate
-  y<- stateData
+  return(stateData[which(rank(death,na.last=T,ties.method="min")==1),2])
 }

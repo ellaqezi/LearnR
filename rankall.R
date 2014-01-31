@@ -31,7 +31,8 @@ rankall <- function(outcome, num = "best") {
     }
     hospitals<- rbind(hospitals,c(hospital[num],state))
   }
-  colnames(x=hospitals) <- c("hospital", "state")
   hospitals <- hospitals[-1,]
+  colnames(x=hospitals) <- c("hospital", "state")
+  rownames(hospitals) <- states
   return(as.data.frame(hospitals))
 }

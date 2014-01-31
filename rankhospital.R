@@ -25,6 +25,5 @@ rankhospital <- function(state, outcome, num = "best") {
   } else if (num=="worst") {
     num=length(hospital)
   }
-#  order(rank(death,na.last=T,ties.method="min"))
   return(hospital[num])
 }

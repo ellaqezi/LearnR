@@ -1,4 +1,4 @@
-best <- function(state, outcome) {
+rankhospital <- function(state, outcome, num = "best") {
   ## Read outcome data
   data <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
   stateData <- data[data$State == state,]
@@ -17,8 +17,13 @@ best <- function(state, outcome) {
   } else {
     stop("invalid state")
   }
-  ## Return hospital name in that state with lowest 30-day death
-  ## rate
-  hospitals <- stateData[order(rank(death,na.last=T, ties.method="min"), stateData$Hospital.Name),2]
-  return(hospitals[1])
+  ## Return hospital name in that state with the given rank
+  ## 30-day death rate
+  hospitals <- stateData[order(death, stateData$Hospital.Name, na.last=NA),2]
+  if (num=="best") {
+    num = 1
+  } else if (num=="worst") {
+    num =length(hospitals)
+  }
+  return(hospitals[num])
 }

@@ -1,9 +1,9 @@
 rankall <- function(outcome, num = "best") {
   ## Read outcome data
   data <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
-  hospitals <- matrix(ncol=2)
   ## Check that state and outcome are valid
   states <- names(table(data$State))
+  hospitals <- matrix(ncol=2)
   for (i in 1:length(states)) {
     state = states[i]
     stateData <- data[data$State == state,]
@@ -29,8 +29,9 @@ rankall <- function(outcome, num = "best") {
     } else if (num=="worst") {
       num=length(hospital)
     }
-    hospitals <- rbind(hospitals,c(hospital[num], state))
+    hospitals<- rbind(hospitals,c(hospital[num],state))
   }
-  #  return(hospital[num])
-  return(hospitals)
+  colnames(x=hospitals) <- c("hospital", "state")
+  hospitals <- hospitals[-1,]
+  return(as.data.frame(hospitals))
 }

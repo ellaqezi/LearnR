@@ -19,5 +19,6 @@ best <- function(state, outcome) {
   }
   ## Return hospital name in that state with lowest 30-day death
   ## rate
-  return(stateData[which(rank(death,na.last=T,ties.method="min")==1),2])
+  hospitals <- stateData[order(rank(death,na.last=T, ties.method="min"), stateData$Hospital.Name),2]
+  return(hospitals[1])
 }
